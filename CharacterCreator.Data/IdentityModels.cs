@@ -25,6 +25,7 @@ namespace CharacterCreator.WebAPI.Models
         {
             // hello
             // goodbye
+            // hello again
         }
         
         public static ApplicationDbContext Create()
