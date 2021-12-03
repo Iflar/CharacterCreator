@@ -23,6 +23,7 @@ namespace CharacterCreator.WebAPI.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            // hello
         }
         
         public static ApplicationDbContext Create()
