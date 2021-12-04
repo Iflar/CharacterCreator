@@ -11,11 +11,8 @@ namespace CharacterCreator.Data
     {
         [Key]
         public int TeamId { get; set; }
-
         public Guid OwnerId { get; set; }
-
         public string TeamName { get; set; }
-
         public string Description { get; set; }
     }
 }
