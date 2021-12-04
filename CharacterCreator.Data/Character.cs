@@ -18,7 +18,8 @@ namespace CharacterCreator.Data
          */
 
         [Key]
-        public Guid CharacterId { get; set; } //implement relationship to team
+        public int CharacterId { get; set; } //implement relationship to team
+        public Guid OwnerId { get; set; }
         public string Name { get; set; }
         public int Height { get; set; }
         public string Race { get; set; }
