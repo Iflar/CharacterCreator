@@ -22,7 +22,7 @@ namespace CharacterCreator.Services
             var entity =
                 new Character()
                 {
-                    CharacterId = _characterId,
+                    OwnerId = _characterId,
                     Name = model.Name,
                     Height = model.Height,
                     Race = model.Race,
@@ -42,7 +42,7 @@ namespace CharacterCreator.Services
                 var query =
                     ctx
                         .Characters
-                        .Where(e => e.CharacterId == _characterId)
+                        .Where(e => e.OwnerId == _characterId)
                         .Select(
                             e =>
                                 new CharacterListItem
@@ -54,14 +54,14 @@ namespace CharacterCreator.Services
                 return query.ToArray();
             }
         }
-        public CharacterDetail GetCharacterById(Guid id)
+        public CharacterDetail GetCharacterById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Characters
-                        .Single(e => e.CharacterId == id && e.CharacterId == _characterId);
+                        .Single(e => e.CharacterId == id && e.OwnerId== _characterId);
                 return
                     new CharacterDetail
                     {
@@ -80,7 +80,7 @@ namespace CharacterCreator.Services
                 var entity =
                     ctx
                         .Characters
-                        .Single(e => e.CharacterId == model.CharacterId && e.CharacterId == _characterId);
+                        .Single(e => e.CharacterId == model.CharacterId && e.OwnerId == _characterId);
 
                 entity.Name = model.Name;
                 entity.Height = model.Height;
@@ -97,7 +97,7 @@ namespace CharacterCreator.Services
                 var entity =
                     ctx
                         .Characters
-                        .Single(e => e.CharacterId == characterId && e.CharacterId == _characterId);
+                        .Single(e => e.CharacterId == characterId && e.OwnerId == _characterId);
 
                 ctx.Characters.Remove(entity);
 
