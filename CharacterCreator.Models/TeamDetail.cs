@@ -8,7 +8,9 @@ namespace CharacterCreator.Models
 {
     public class TeamDetail
     {
-        public Guid TeamId { get; set; }
+        //public Guid OwnerId { get; set; }
+
+        public int TeamId { get; set; }
 
         public string TeamName { get; set; }
 

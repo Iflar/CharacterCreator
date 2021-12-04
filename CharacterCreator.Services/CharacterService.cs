@@ -17,7 +17,7 @@ namespace CharacterCreator.Services
         {
             _characterId = characterId;
         }
-        public bool CreateCharacer(CharacterCreate model)
+        public bool CreateCharacter(CharacterCreate model)
         {
             var entity =
                 new Character()
@@ -61,7 +61,7 @@ namespace CharacterCreator.Services
                 var entity =
                     ctx
                         .Characters
-                        .Single(e => e.CharacterId == id && e.OwnerId== _characterId);
+                        .Single(e => e.CharacterId == id && e.OwnerId == _characterId);
                 return
                     new CharacterDetail
                     {
