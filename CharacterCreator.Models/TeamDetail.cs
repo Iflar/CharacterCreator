@@ -8,10 +8,8 @@ namespace CharacterCreator.Models
 {
     public class TeamDetail
     {
-        public Guid TeamId { get; set; }
-
+        public int TeamId { get; set; }
         public string TeamName { get; set; }
-
         public string Description { get; set; }
     }
 }

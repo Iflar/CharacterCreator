@@ -83,5 +83,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterCreator.Data\CharacterCreator.Data.csproj">
+      <Project>{7491E5D7-0962-42D4-8761-75C71CA27CB2}</Project>
+      <Name>CharacterCreator.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CharacterCreator.Models\CharacterCreator.Models.csproj">
+      <Project>{8BAC3DE8-B2BA-43B5-B962-A7DFBEA77EDD}</Project>
+      <Name>CharacterCreator.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

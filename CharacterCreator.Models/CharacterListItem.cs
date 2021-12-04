@@ -8,7 +8,7 @@ namespace CharacterCreator.Models
 {
     public class CharacterListItem
     {
-        public Guid CharacterId { get; set; }
+        public int CharacterId { get; set; }
         public string Name { get; set; }
     }
 }
