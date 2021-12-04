@@ -1,5 +1,7 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using CharacterCreator.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -23,11 +25,10 @@ namespace CharacterCreator.WebAPI.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            // hello
-            // goodbye
-            // hello again
         }
-        
+        public DbSet<Character> Characters { get; set; }
+        public DbSet<Team> Teams { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
