@@ -9,7 +9,6 @@ namespace CharacterCreator.Services
     public class TeamService
     {
         private readonly Guid _teamId;
-
         public TeamService(Guid teamId)
         {
 
